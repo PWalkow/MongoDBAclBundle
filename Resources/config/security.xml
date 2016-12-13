@@ -26,7 +26,7 @@
             <argument type="service" id="security.acl.cache" on-invalid="null" />
         </service>
 
-        <service id="secuity.acl.connection" parent="doctrine_mongodb.odm.default_connection">
+        <service id="security.acl.connection" parent="doctrine_mongodb.odm.default_connection">
         </service>
 
         <service id="pwalkow.acl_manager"
@@ -35,7 +35,7 @@
             <argument type="service" id="security.acl.provider" />
             <argument type="service" id="security.token_storage" />
             <argument type="service" id="security.acl.object_identity_retrieval_strategy" />
-            <argument type="service" id="secuity.acl.connection" />
+            <argument type="service" id="security.acl.connection" />
         </service>
 
         <service id="security.mongodb.acl_provider" parent="doctrine_mongodb.odm.security.acl.provider" />
