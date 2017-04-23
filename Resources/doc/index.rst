@@ -12,7 +12,7 @@ To install MongoDBAclBundle using composer add following line to you composer.js
 Use the composer update command to start the installation. After the installation add following line into the bundles array in your AppKernel.php file::
 
     # AppKernel.php
-    new PWalkow\MongoDBAclBundle\PWalkowMongoDBAclBundle()
+    new PWalkow\MongoDBAclBundle\MongoDBAclBundle()
 
 Configuration
 -------------
@@ -30,13 +30,17 @@ The next requirement is to add the provider to the security configuration::
     security:
         acl:
             provider: mongodb_acl_provider
-
-
+            
+Add Service::            
+            
+    # app/config/services.yml
+    mongodb_acl_provider:
+        parent: doctrine_mongodb.odm.security.acl.provider
 
 The full acl provider configuration options are listed below::
 
     # app/config/config.yml
-    iam_persistent_mongo_db_acl:
+    pwalkow_mongo_db_acl:
         acl_provider:
             default_database: ~
             collections:
