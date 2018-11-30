@@ -12,7 +12,8 @@ To install MongoDBAclBundle using composer add following line to you composer.js
 Use the composer update command to start the installation. After the installation add following line into the bundles array in your AppKernel.php file::
 
     # AppKernel.php
-    new PWalkow\MongoDBAclBundle\PWalkowMongoDBAclBundle()
+   ------------------- new PWalkow\MongoDBAclBundle\PWalkowMongoDBAclBundle()
+   +++++++++++++++++++ new PWalkow\MongoDBAclBundle\MongoDBAclBundle(),
 
 Configuration
 -------------
